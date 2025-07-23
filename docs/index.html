@@ -2,38 +2,76 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Akash's Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name | Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
 </head>
 <body>
+    <button id="theme-toggle" class="theme-toggle">
+        🌙
+      </button>
+      
   <header>
-    <h1>Akash A P</h1>
-    <p>Student | Aspiring Developer</p>
+    <h1 data-aos="fade-down">Hi, I’m Akash Patil</h1>
+
+
+
+<img src="assets\images\me.jpg" alt="My photo" data-aos="flip-left"  class="profile-img">>
+<p data-aos="fade-right" data-aos-delay="350" data-aos-duration="800">
+    I love building websites!
+  </p>
+  
+
+    
+    <p>Aspiring Developer | Student | Tech Enthusiast</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
 
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Projects</a>
-    <a href="#">Contact</a>
-  </nav>
+  <main>
+    <section>
+      <h2>Welcome to My Portfolio</h2>
+      <p>This is where your intro goes.</p>
+    </section>
+  </main>
 
-  <section class="about">
-    <h2>About Me</h2>
-    <p>Hello! I'm Akash, a passionate learner currently exploring web development and technology. I love building cool stuff and learning new skills!</p>
-    <!-- Optional Photo -->
-    <img src="images/your-photo2.jpg" alt="My Photo" /> 
-  </section>
 
-  <section class="contact">
-    <h2>Contact</h2>
-    <p>Email: forpwpatil@gmail.com</p>
-    <p>GitHub: <a href="https://github.com/AkashAP147" target="_blank">AkashAP147</a></p>
-  </section>
+  <script>
+    const toggleBtn = document.getElementById("theme-toggle");
+    const currentTheme = localStorage.getItem("theme");
+  
+    if (currentTheme === "dark") {
+      document.body.classList.add("dark-mode");
+      toggleBtn.textContent = "☀️";
+    }
+  
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      let theme = "light";
+      if (document.body.classList.contains("dark-mode")) {
+        toggleBtn.textContent = "☀️";
+        theme = "dark";
+      } else {
+        toggleBtn.textContent = "🌙";
+      }
+      localStorage.setItem("theme", theme);
+    });
+  </script>
+  <!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<footer>
+  <p>&copy; 2025 Akash Patil</p>
+</footer>
 
-  <footer>
-    <p>© 2025 Akash. All rights reserved.</p>
-  </footer>
 </body>
 </html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <title>About Me | Your Name</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Add in <head> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+    
+      
+  <header>
+    <h1>About Me</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="about-section">
+    <section>
+      <h2>Hello, I'm Akash 👋</h2>
+      <p>
+        I'm a passionate student interested in web development, software engineering, and building cool tech stuff. I enjoy solving problems and creating things that make life easier or more fun.
+      </p>
+
+      <h3>🎓 Education</h3>
+      <ul>
+        <li>BE in Computer Science - XYZ College</li>
+        <li>High School - ABC School</li>
+      </ul>
+
+      <h3>🛠️ Skills</h3>
+      <ul>
+        <li>Languages: HTML, CSS, JavaScript, C, Java, Python</li>
+        <li>Tools: Git, VS Code, Android Studio, XAMPP</li>
+        <li>Database: MySQL, SQLite (basic)</li>
+        <a href="assets\resume\resume.pdf" download class="resume-btn">
+            <i class="fas fa-file-pdf"></i> Download Resume
+          </a>
+          
+          
+
+      </ul>
+
+      <h3>🌱 Hobbies & Interests</h3>
+      <p>I love playing chess, working on mini-projects, watching tech content, and learning new skills in my free time.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Akash</p>
+  </footer>
+  <script>
+    const toggleBtn = document.getElementById("theme-toggle");
+    const currentTheme = localStorage.getItem("theme");
+  
+    if (currentTheme === "dark") {
+      document.body.classList.add("dark-mode");
+      toggleBtn.textContent = "☀️";
+    }
+  
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      let theme = "light";
+      if (document.body.classList.contains("dark-mode")) {
+        toggleBtn.textContent = "☀️";
+        theme = "dark";
+      } else {
+        toggleBtn.textContent = "🌙";
+      }
+      localStorage.setItem("theme", theme);
+    });
+  </script>
+  <!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+  
+</body>
+</html>

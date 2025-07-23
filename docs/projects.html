@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects | Your Name</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+</head>
+<body>
+  <header>
+    <h1>My Projects</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <div class="container">
+    <div class="left-column">...</div>
+    <div class="right-column">...</div>
+  </div>
+  
+
+  <main class="projects-section">
+    <div class="project-card">
+      <h2>Recipe Planner App</h2>
+      <p>An app to manage recipes and generate grocery lists. Built with Android Studio using Java.</p>
+    </div>
+
+    <div class="project-card">
+      <h2>Portfolio Website</h2>
+      <p>This very portfolio website you’re seeing! Created using HTML, CSS, and JavaScript.</p>
+    </div>
+
+    <div class="project-card">
+      <h2>Weather App</h2>
+      <p>A weather app with offline mode, built for a mini project using Java and Android Studio.</p>
+    </div>
+
+    <!-- Add more project cards as needed -->
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Your Name</p>
+  </footer>
+  <script>
+    const toggleBtn = document.getElementById("theme-toggle");
+    const currentTheme = localStorage.getItem("theme");
+  
+    if (currentTheme === "dark") {
+      document.body.classList.add("dark-mode");
+      toggleBtn.textContent = "☀️";
+    }
+  
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      let theme = "light";
+      if (document.body.classList.contains("dark-mode")) {
+        toggleBtn.textContent = "☀️";
+        theme = "dark";
+      } else {
+        toggleBtn.textContent = "🌙";
+      }
+      localStorage.setItem("theme", theme);
+    });
+  </script>
+  <!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+  
+</body>
+</html>
